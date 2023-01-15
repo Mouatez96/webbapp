@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class Employee {
 	
-	private Long id;
+	private Integer id;
 	
 	private String firstName;
     
@@ -15,11 +15,11 @@ public class Employee {
 	
 	private int age;
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
