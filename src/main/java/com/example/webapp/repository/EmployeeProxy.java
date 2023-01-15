@@ -38,7 +38,7 @@ public class EmployeeProxy {
 		return response.getBody();
 	}
 	
-	public Employee getEmployee(Long id) {
+	public Employee getEmployee(int id) {
 		
 		String baseApiUrl = customProperties.getApiUrl();
 		String getEmployeeUrl = baseApiUrl + "/v1/employee/" + id;
@@ -84,7 +84,7 @@ public class EmployeeProxy {
 		return response.getBody();
 	}
 	
-	public void deleteEmployee(Long id) {
+	public void deleteEmployee(int id) {
 		String baseApiUrl = customProperties.getApiUrl();
 		String deleteEmployeeUrl = baseApiUrl + "/v1/employee" + id;
 		
