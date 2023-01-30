@@ -7,6 +7,11 @@
     </head>
     <body>
         <h2 class="h2">Liste des employées</h2>
+        <br><br><br>
+        <div>
+        	<a th:href="@{/ajouter}">Ajouter nouvel Employee</a>
+        </div>
+        <br><br><br>
         <table>
             <thead>
                 <tr>
@@ -22,8 +27,9 @@
                 <tr th:each="employee: ${employees}">
                     <td><span th:text="${employee.firstName}"> Prénom </span></td>
                     <td><span th:text="${employee.lastName}"> Nom </span></td>
-                    <td><span th:text="${employee.age}"> Nom </span></td>
-
+                    <td><span th:text="${employee.age}"> Age </span></td>
+					<td><a th:href="@{/deleteEmployee/{id}(id=${employee.id})}">Supprimer</a></td>
+					<td><a th:href='@{/updateEmployee/{id}(id=${employee.id})}'>Update</a></td>
                 </tr>
             </tbody>
         </table>
